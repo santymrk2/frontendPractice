@@ -38,45 +38,33 @@
 			justify-self: center;
 			display: none;
 		}
+		.title{
+			font-size: var(--lg);
+			margin-bottom: 12px;
+			text-align: start;
+		}
+		.subtitle {
+			color: var(--very-light-pink);
+			font-size: var(--md);
+			font-weight: 300;
+			margin-top: 0;
+			margin-bottom: 32px;
+			text-align: center;
+		}
 		.form{
 			display: flex;
 			flex-direction: column;
-		}
-		.form a {
-			color: var(--hospital-green);
-			font-size: var(--sm);
-			text-align: center;
-			text-decoration: none;
-			margin-bottom: 52px;
-			margin-top: 12px;
+			margin-top: 32px;
 		}
 		.label {
 			font-size: var(--sm);
 			font-weight: bold;
 			margin-bottom: 4px;
 		}
-		.input {
-			background-color: var(--text-input-field);
-			border: none;
-			border-radius: 8px;
-			height: 30px;
+		.value{
+			color: var(--very-light-pink);
 			font-size: var(--md);
-			padding: 6px;
-			margin-bottom: 12px;
-		}
-		.input-email {
-			margin-bottom: 22px;
-		}
-		.primary-button{
-			background-color: var(--hospital-green);
-			font-family: 'Quicksand', sans-serif;
-			border-radius: 8px;
-			border: none;
-			color: var(--white);
-			height: 50px;
-			cursor: pointer;
-			font-size: var(--md);
-			font-weight: bold;
+			margin: 8px 0 32px 0;
 		}
 		.secondary-button{
 			background-color: var(--white);
@@ -95,10 +83,10 @@
 			margin-bottom: 30px;
 		}
 		@media (max-width: 640px) {
-			.logo{
-				display: block;
+			.login {
+				align-content: start;
 			}
-			.secondary-button{
+			.secondary-button {
 				position: absolute;
 				bottom: 10px;
 			}
@@ -108,22 +96,17 @@
 <body>
 	<div class="login">
 		<div class="form-container">
-			<img src="./logos/logo_yard_sale.svg" alt="logo"class="logo">
+			<h1 class="title">Create</h1>
 
 			<form action="/" class="form">
+				<label for="name" class="label">Name</label></label>	
+				<p class="value">Camila Yokuu</p>
 				<label for="email" class="label">Email adress</label>
-				<input type="text" id="email" placeholder="example@example.com" class="input input-email">
-				<label for="new-password" class="label">Re-enter password</label>
-				<input type="password" id="password" placeholder="********" class="input input-password">
-
-				<input type="submit" value="Log in" class="primary-button login-button">
-
-				<a href="/">Forgot my password</a>
-			</form>
-
-			<form>
-				<button class="secondary-button signup-button">Sign up</button>
-			</form>
+				<p class="value">camilayokuu@email.com</p>
+				<label for="password" class="label">Password</label>
+				<p class="value">*******</p>	
+				<input type="submit" value="Edit" class="secondary-button edit-button">
+		</form>
 		</div>
 	</div>
 </body>
